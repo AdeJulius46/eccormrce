@@ -5,9 +5,13 @@ import { AiOutlineMinus,AiOutlinePlus,AiFillStar,AiOutlineStar } from 'react-ico
 import { urlFor,client } from 'lib/client'
 const ProductDetails = ({product,products}) => {
 
-  const {deQty,inQty,qty,onAdd}= useStateContext();
+  const {deQty,inQty,qty,onAdd,setShowcart}= useStateContext();
      const [index, setIndex]= React.useState(0) 
       const {image,name,details,price }= product;
+
+      const Buynow = ()=>{
+        setShowcart(true)
+      }
   return (
     <div>
         <div className='product-detail-container' >
@@ -57,7 +61,7 @@ const ProductDetails = ({product,products}) => {
                             </h3>
                             <p className='quantity-desc'>
                               <span className='minus'  onClick={deQty} > <AiOutlineMinus /></span>
-                              <span className='num'>{qty}</span>
+                              <span>{qty}</span>
                               <span className='plus'  onClick={inQty} > <AiOutlinePlus /></span>
                             </p>
                          </div> 
@@ -70,6 +74,7 @@ const ProductDetails = ({product,products}) => {
                                 </button>
                                 <button type='button'
                                 className='buy-now'
+                                onClick={Buynow}
                                  >Buy Now
 
                                 </button>

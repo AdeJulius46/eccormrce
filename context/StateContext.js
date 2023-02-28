@@ -98,6 +98,7 @@ const Context = createContext()
             deQty,
             onAdd,
             onRemove,
+            setShowcart,
             toggleCartItemQuanitity
         }
              
