@@ -99,6 +99,9 @@ const Context = createContext()
             onAdd,
             onRemove,
             setShowcart,
+            settotalPrice,
+            settotalQuantities,
+            setcartItem,
             toggleCartItemQuanitity
         }
              

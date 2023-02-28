@@ -9,7 +9,8 @@ const ProductDetails = ({product,products}) => {
      const [index, setIndex]= React.useState(0) 
       const {image,name,details,price }= product;
 
-      const Buynow = ()=>{
+      const Buynow = ()=> {
+        onAdd(product,qty);
         setShowcart(true)
       }
   return (
